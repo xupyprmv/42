@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>$TITLE$</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://beaverslider.com/code/current/beaverslider.js"></script>
+    <script src="http://beaverslider.com/code/current/beaverslider-effects.js"></script> 
+    <script>
+
+    $(function(){
+        var slider = new BeaverSlider({
+            structure: {
+              container: {
+                id: "my-slider",
+                width: 720,
+                height: 420
+              }
+            },
+            content: {
+              images: $JSON$ 
+            },
+            controls: {
+                previewMode: true,
+                align: "center",
+                containerClass: "control-container-img",
+                elementClass: "control-element-img",
+                elementActiveClass: "control-element-active-img"
+            },
+            animation: {
+              effects: effectSets["slider: big set 2"],
+              interval: 2000
+            },
+            events: {
+                afterSlideStart: function(slider) {
+                    var scrollTo = (slider.currentImage - 2) * $(".control-element-active-img").width();
+
+                    $(".control-container-img").animate({ scrollLeft: scrollTo }, 400);
+                }
+            }
+        });   
+    });
+
+    </script>
+    <style>
+/* image-preview control elements */
+.control-container-img {
+    /* as far as contorls are displayed as inline-block this puts them to center */
+    /* choose left or right to put it to left/right */
+    text-align: center; 
+    
+    /* change this to the values you need */
+    margin-top: 1px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.control-element-img, .control-element-active-img {
+    /* this displays element as inline-block; zoom and *display is a hack for ie7 which does not support inline-block */
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    
+    /* change this to the values you need */
+    width: 150px;
+    height: 88px;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+.control-element-img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70)
+}
+
+.control-element-active-img {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.control-element-img img, .control-element-active-img img {
+    width: 150px;
+    height: 88px;
+}             
+    </style>
+  </head>
+
+  <body>
+    <div id="my-slider"></div>
+  </body>
+</html>
