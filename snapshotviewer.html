@@ -11,21 +11,21 @@
     $(function(){
         var slider = new BeaverSlider({
             structure: {
-              container: {
-                id: "my-slider",
-                width: 720,
-                height: 420
-              }
+                container: {
+                    id: "my-slider",
+                    width: 720,
+                    height: 420
+                },
+                controls: {
+                    previewMode: true,
+                    align: "center",
+                    containerClass: "control-container-img",
+                    elementClass: "control-element-img",
+                    elementActiveClass: "control-element-active-img"
+                }
             },
             content: {
               images: [$SNAPSHOTS$]
-            },
-            controls: {
-                previewMode: true,
-                align: "center",
-                containerClass: "control-container-img",
-                elementClass: "control-element-img",
-                elementActiveClass: "control-element-active-img"
             },
             animation: {
               effects: effectSets["slider: big set 2"],
