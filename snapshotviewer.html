@@ -120,27 +120,16 @@ p {
     padding:0px;	 
 }
 
-#rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #fe6400;
-    padding: 20px; 
-    width: 970px;
-    height: 710px;    
+#contentwrap {
+    width: 1040px;
+    margin: 0 auto;
+	height: 680px;
 }
-
-
 
 #zillacontent {
     border-radius: 25px;
     border: 2px solid #fe6400;
-    text-align:center;
-    margin-left: auto;
-    margin-right: auto;
-      width: 960px;
-  height: 605px;
-  text-align:center;
-  margin-left: auto;
-  margin-right: auto;
+    margin: 5px;
 }
 
 #leftcolumnwrap {
@@ -184,18 +173,16 @@ p {
         <div id="leftcolumnwrap">
         <div id="leftcolumn">
 				<p>Domain Information</p>
-            <p>Anchor Text: </p>
-            <p>$LINKS$</p>
-		<p>WayBack Titles:<p>
-		<p> $TITLES$</p>
+            <p>Anchor Text: $LINKS$</p>
+			<p>WayBack Titles: $TITLES$</p>
             
         </div>
         </div>
-      
-        <zillacontent id="#rcorners2">
-           <div id="my-slider" style="width:960px; height:605px;"></div>
+        <div id="contentwrap">
+        <div id="zillacontent">
+           <center><div id="my-slider" style="width:960px; height:605px;"></div></center>
         </div>
-    
+        </div>
         <div id="rightcolumnwrap">
         <div id="rightcolumn">
 			<p>Social Signals</p>
