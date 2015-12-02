@@ -67,8 +67,10 @@
             });
         </script>
         <script type="text/javascript">
-            var links = '$LINKS$'.split(",").map(function(link) {
-                return {text: link, weight: 10};
+            var links = '$LINKS$'.split(/,| /).map(function(link) {
+                if (link!=='') {
+                    return {text: link, weight: Math.floor(Math.random() * 10 + 1)};
+                }
             });
 
             $(function () {
@@ -189,7 +191,7 @@
             <div id="leftcolumnwrap">
                 <div id="leftcolumn">
                     <p>Domain Information</p>
-                    <p>Anchor Text: <div id="linksCloud" style="width:200px; height:200px;"></div><p>
+                    <p>Anchor Text: <div id="linksCloud" style="width:300px; height:300px;"></div><p>
                     <p>WayBack Titles: $TITLES$</p>
                 </div>
             </div>
