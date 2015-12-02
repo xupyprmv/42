@@ -68,7 +68,7 @@
         </script>
         <script type="text/javascript">
             var links = '$LINKS$'.split(",").map(function(link) {
-                return {text: link, weight: 1};
+                return {text: link, weight: 10};
             });
 
             $(function () {
@@ -189,15 +189,13 @@
             <div id="leftcolumnwrap">
                 <div id="leftcolumn">
                     <p>Domain Information</p>
+                    <p id="linksCloud" style="width:200px; height:200px;"><p>
                     <p>WayBack Titles: $TITLES$</p>
                 </div>
             </div>
             <div id="contentwrap">
                 <div id="zillacontent">
                     <center><div id="my-slider" style="width:960px; height:605px;"></div></center>
-                </div>
-                <div id="cloud">
-                    <center><div id="linksCloud" style="width:960px; height:100px; padding-top: 100px"></div></center>
                 </div>
             </div>
             <div id="rightcolumnwrap">
