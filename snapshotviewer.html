@@ -67,14 +67,22 @@
             });
         </script>
         <script type="text/javascript">
-            var links = '$LINKS$'.split(/,| /).map(function(link) {
-                if (link!=='') {
-                    return {text: link, weight: Math.floor(Math.random() * 10 + 1)};
+            var words = '$LINKS$'.split(/,| /).filter(function(n){ return n != undefined });
+            var cloudSource = [];
+            words.forEach(function (word) {
+                var f = false;
+                cloudSource.forEach(function (cloudElement) {
+                    if (word === cloudElement.text) {
+                        cloudElement.weight++;
+                        f = true;
+                    }
+                });
+                if (!f) {
+                    cloudSource.push({text:word, weight:1});
                 }
-            }).filter(function(n){ return n != undefined });
-
+            });            
             $(function () {
-                $("#linksCloud").jQCloud(links);
+                $("#linksCloud").jQCloud(cloudSource);
             });
         </script>    
         <style>
