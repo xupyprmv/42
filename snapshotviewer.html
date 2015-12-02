@@ -71,7 +71,7 @@
                 if (link!=='') {
                     return {text: link, weight: Math.floor(Math.random() * 10 + 1)};
                 }
-            });
+            }).filter(function(n){ return n != undefined });
 
             $(function () {
                 $("#linksCloud").jQCloud(links);
