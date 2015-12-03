@@ -24,7 +24,7 @@
 	<link href="http://www.pbnhq.com/ronin/css/jquery.gritter.css" rel="stylesheet">
 	<link href="http://www.pbnhq.com/ronin/css/jquery.noty.css" rel="stylesheet">
 	<link href="http://www.pbnhq.com/ronin/css/noty_theme_default.css" rel="stylesheet">
-	<link href="http://www.pbnhq.com/ronin/css/jqcloud.css" rel="stylesheet">
+	<link href="https://rawgit.com/lucaong/jQCloud/master/jqcloud/jqcloud.css" rel="stylesheet">
 	
 	
 	<!-- main style -->
@@ -36,7 +36,7 @@
             structure: {
                 container: {
                     id: "my-slider",
-                    width: 800,
+                    width: 900,
                     height: 605
                 },
                 controls: {
@@ -136,6 +136,13 @@ body {
     padding:0px;
 }
 
+.row-eq-height{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
     </style>
   </head>
 
@@ -143,7 +150,7 @@ body {
     <div id="header-main">
 		<img src="http://www.pbnhq.com/ronin-logo-zilla2.png" style="width: 596px;"></img>
 	</div>
-		
+<div class="row row-eq-height">	
 	<!--Left Column-->
 	<div class="col-sm-3">
 		<div class="box">
@@ -195,7 +202,7 @@ body {
 									<i class="">LRD</i>
 									<input type="text" value="$TF$" class="greenCircle" />
 								</div>
-									<strong>Referring Domains</strong>
+									<strong>Root Domains</strong>
 							</div>
 							<div class="col-sm-6">	
 								<div class="circleStatsItem green">
@@ -213,13 +220,13 @@ body {
 	</div>
 			
 		<!--Center Column-->
-	<div class="col-sm-6">
+	<div class="col-sm-8">
 		<div class="box">
 			<div class="box-header">
 				<center><h2></span>Spamzilla Snapshots</h2></center>	
 			</div>
 			<div class="box-content">
-				<div id="my-slider" style="width:800px; height:605px;"></div>
+				<div id="my-slider" style="width:900px; height:710px;"></div>
 			</div>
 		</div>
 	</div>
@@ -251,7 +258,7 @@ body {
 			</div>
 		</div>
 	</div>
-        
+       
 		
 		<div id="footer"></div>
     
@@ -275,7 +282,7 @@ body {
 	<script src="http://www.pbnhq.com/ronin/js/jquery.gritter.min.js"></script>
 	<script src="http://www.pbnhq.com/ronin/js/jquery.noty.min.js"></script>
 	
-	<script src="http://www.pbnhq.com/ronin/js/jqcloud.js"></script>
+	<script src="https://rawgit.com/lucaong/jQCloud/master/jqcloud/jqcloud-1.0.4.min.js"></script>
 	<script src="http://www.pbnhq.com/ronin/js/jquery.noty.min.js"></script>
 	
 	<!-- theme scripts -->
